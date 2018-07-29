@@ -14,6 +14,7 @@ public class BooksDbHelper extends SQLiteOpenHelper {
             BooksContract.BooksEntry.TABLE_NAME + " (" +
             BooksContract.BooksEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             BooksContract.BooksEntry.COLUMN_BOOKS_NAME + " TEXT NOT NULL, " +
+            BooksContract.BooksEntry.COLUMN_BOOKS_AUTHOR + " TEXT NOT NULL, " +
             BooksContract.BooksEntry.COLUMN_BOOKS_PRICE + " INTEGER NOT NULL, " +
             BooksContract.BooksEntry.COLUMN_BOOKS_QUANTITY + " INTEGER NOT NULL DEFAULT 0, " +
             BooksContract.BooksEntry.COLUMN_BOOKS_SUPPLIER_NAME + " TEXT NOT NULL, " +

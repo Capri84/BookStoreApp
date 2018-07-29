@@ -1,0 +1,115 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardView.Light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp">
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.85"
+        android:background="@drawable/vintage_books">
+
+        <TextView
+            android:id="@+id/book_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#DE000000"
+            android:textSize="@dimen/dummy4"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/book_price_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Big Nerd Ranch" />
+
+        <TextView
+            android:id="@+id/book_author_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="#8A000000"
+            android:textSize="@dimen/dummy2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/book_price_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_title_tv"
+            tools:text="@string/book_author" />
+
+        <TextView
+            android:id="@+id/book_price_tv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:textColor="#FFD50000"
+            android:textSize="@dimen/dummy3"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="25$" />
+
+        <TextView
+            android:id="@+id/in_stock_tv"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:minWidth="0dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textColor="#DE000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_price_tv"
+            app:layout_constraintVertical_bias="0.5"
+            tools:text="@string/in_stock_tv" />
+
+        <TextView
+            android:id="@+id/in_stock_quantity_tv"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:minWidth="0dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="@dimen/dummy4"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/in_stock_tv"
+            app:layout_constraintTop_toBottomOf="@+id/book_price_tv"
+            tools:text="5" />
+
+        <Button
+            android:id="@+id/sale_btn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:minWidth="0dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/dummy2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toEndOf="parent"
+            tools:layout_editor_absoluteX="272dp"
+            tools:text="@string/sale_button" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
