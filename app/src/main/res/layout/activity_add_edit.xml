@@ -28,14 +28,14 @@
 
             <!-- Title field -->
             <EditText
-                android:id="@+id/edit_pet_name"
+                android:id="@+id/edit_book_title"
                 style="@style/EditorFieldStyle"
                 android:hint="@string/book_title"
                 android:inputType="textCapWords" />
 
             <!-- Author field -->
             <EditText
-                android:id="@+id/edit_pet_breed"
+                android:id="@+id/edit_book_author"
                 style="@style/EditorFieldStyle"
                 android:hint="@string/book_author"
                 android:inputType="textCapWords" />
@@ -63,7 +63,7 @@
 
             <!-- Price field -->
             <EditText
-                android:id="@+id/edit_pet_weight"
+                android:id="@+id/edit_book_price"
                 style="@style/EditorFieldStyle"
                 android:hint="@string/book_price_hint"
                 android:inputType="number" />
@@ -95,6 +95,7 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/decrement_img_btn"
                 android:layout_width="@dimen/dummy3"
                 android:layout_height="@dimen/dummy3"
                 android:layout_marginLeft="@dimen/dummy"
@@ -106,9 +107,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:paddingLeft="@dimen/dummy"
-                tools:text="5" />
+                android:text="0" />
 
             <ImageButton
+                android:id="@+id/increment_img_btn"
                 android:layout_width="@dimen/dummy3"
                 android:layout_height="@dimen/dummy3"
                 android:layout_marginLeft="@dimen/dummy"

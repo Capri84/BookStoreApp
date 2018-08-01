@@ -9,7 +9,7 @@ public class BooksDbHelper extends SQLiteOpenHelper {
     public static final String LOG_TAG = BooksDbHelper.class.getSimpleName();
 
     private static final String DATABASE_NAME = "books.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String SQL_CREATE_BOOKS_TABLE = "CREATE TABLE " +
             BooksContract.BooksEntry.TABLE_NAME + " (" +
             BooksContract.BooksEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -32,6 +32,8 @@ public class BooksDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+        if (DATABASE_VERSION < 3)
+            sqLiteDatabase.execSQL("ALTER TABLE " + BooksContract.BooksEntry.TABLE_NAME + " ADD " +
+                    "" + BooksContract.BooksEntry.COLUMN_BOOKS_AUTHOR + " TEXT NOT NULL DEFAULT 'Author not specified'");
     }
 }

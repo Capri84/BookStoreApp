@@ -17,6 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddEditActivity"></activity>
+
+        <provider
+            android:name=".data.BooksProvider"
+            android:authorities="com.example.android.bookstoreapp"
+            android:exported="false" />
     </application>
 
 </manifest>
