@@ -16,12 +16,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddEditActivity"></activity>
+        <activity
+            android:name=".AddEditActivity"
+            android:windowSoftInputMode="stateHidden" />
 
         <provider
             android:name=".data.BooksProvider"
             android:authorities="com.example.android.bookstoreapp"
             android:exported="false" />
+
+        <activity
+            android:name=".BookDetailsActivity"
+            android:label="@string/book_details_activity_title"
+            android:parentActivityName="com.example.android.bookstoreapp.MainActivity"
+            android:windowSoftInputMode="stateHidden">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.bookstoreapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

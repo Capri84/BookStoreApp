@@ -24,6 +24,7 @@
     <string name="supplier_phone">Supplier\'s phone</string>
     <string name="save_btn">Save item</string>
     <string name="delete_item">Delete item</string>
+    <string name="edit_item">Edit item</string>
     <string name="delete_all_items">Delete all items</string>
     <!-- Title for the activity to add a new book [CHAR LIMIT=20] -->
     <string name="add_edit_activity_title_new_book">Add a Book</string>
@@ -58,4 +59,6 @@
     <string name="price_not_null">Enter the book\'s price</string>
     <string name="suppliers_name_not_null">Enter supplier\'s name</string>
     <string name="suppliers_phone_not_null">Enter supplier\'s phone</string>
+    <!-- Title for the book details activity [CHAR LIMIT=20] -->
+    <string name="book_details_activity_title">Book Details</string>
 </resources>

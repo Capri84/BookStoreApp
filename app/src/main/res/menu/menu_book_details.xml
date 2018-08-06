@@ -2,11 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".AddEditActivity">
+    tools:context=".BookDetailsActivity">
 
     <item
         android:id="@+id/action_save"
         android:icon="@drawable/ic_save_black_24dp"
         android:title="@string/save_btn"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_edit"
+        android:icon="@drawable/ic_edit_black_24dp"
+        android:title="@string/edit_item"
         app:showAsAction="always" />
 </menu>

@@ -2,11 +2,9 @@ package com.example.android.bookstoreapp;
 
 import android.app.LoaderManager;
 import android.content.ContentUris;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -16,12 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
-
 import com.example.android.bookstoreapp.data.BooksContract.BooksEntry;
-import com.example.android.bookstoreapp.data.BooksDbHelper;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -35,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setContentView(R.layout.activity_main);
 
         // Setup FAB to open AddEditActivity
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         });
 
         // Find ListView to populate
-        ListView booksListView = (ListView) findViewById(R.id.list);
+        ListView booksListView = findViewById(R.id.list);
         // Find and set empty view on the ListView, so that it only shows when the list has 0 items.
         View emptyView = findViewById(R.id.empty_view);
         booksListView.setEmptyView(emptyView);
@@ -58,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         booksListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this, AddEditActivity.class);
+                Intent intent = new Intent(MainActivity.this, BookDetailsActivity.class);
                 Uri currentBookUri = ContentUris.withAppendedId(BooksEntry.CONTENT_URI, id);
                 intent.setData(currentBookUri);
                 startActivity(intent);
@@ -130,6 +124,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      */
     private void deleteAllBooks() {
         int rowsDeleted = getContentResolver().delete(BooksEntry.CONTENT_URI, null, null);
-        Log.v("MainActivity", rowsDeleted + " rows deleted from books database");
+        Log.v(LOG_TAG, rowsDeleted + " rows deleted from books database");
     }
 }
