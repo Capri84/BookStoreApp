@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,89 +8,71 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/dummy2"
+        android:padding="@dimen/parameter_8_dp"
         tools:context=".BookDetailsActivity">
 
-        <!-- Book info -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Label -->
             <TextView
-                style="@style/CategoryStyle"
+                style="@style/HeaderStyle"
                 android:text="@string/book_info" />
 
-            <!-- Input fields -->
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:orientation="vertical"
-                android:paddingLeft="4dp">
+                style="@style/EditTextLinesStyle"
+                android:orientation="vertical">
 
-                <!-- Title field -->
                 <EditText
                     android:id="@+id/edit_book_title"
-                    style="@style/EditorFieldStyle"
+                    style="@style/EditTextStyle"
                     android:inputType="textCapWords" />
 
-                <!-- Author field -->
                 <EditText
                     android:id="@+id/edit_book_author"
-                    style="@style/EditorFieldStyle"
+                    style="@style/EditTextStyle"
                     android:inputType="textCapWords" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Price category -->
         <LinearLayout
-            android:id="@+id/container_measurement"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Label -->
             <TextView
-                style="@style/CategoryStyle"
+                style="@style/HeaderStyle"
                 android:text="@string/book_price" />
 
-            <!-- Input fields -->
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:paddingLeft="4dp">
+            <RelativeLayout style="@style/EditTextLinesStyle">
 
-                <!-- Price field -->
                 <EditText
                     android:id="@+id/edit_book_price"
-                    style="@style/EditorFieldStyle"
+                    style="@style/EditTextStyle"
                     android:inputType="number" />
 
-                <!-- Units for price ($) -->
                 <TextView
-                    android:id="@+id/label_weight_units"
-                    style="@style/EditorUnitsStyle"
-                    android:text="$" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/parameter_16_dp"
+                    android:text="@string/currency_sign"
+                    android:textSize="@dimen/text_size_14_sp" />
             </RelativeLayout>
         </LinearLayout>
 
-        <!-- Quantity -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Label -->
             <TextView
-                style="@style/CategoryStyle"
+                style="@style/HeaderStyle"
                 android:text="@string/book_quantity" />
 
-            <!-- Quantity field -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -98,79 +81,82 @@
 
                 <ImageButton
                     android:id="@+id/decrement_img_btn"
-                    android:layout_width="@dimen/dummy3"
-                    android:layout_height="@dimen/dummy3"
-                    android:layout_marginLeft="@dimen/dummy"
-                    android:background="@drawable/ic_remove_circle_outline_black_36dp" />
+                    style="@style/QuantityBtnStyle"
+                    android:background="@drawable/ic_remove_circle_outline_black_36dp"
+                    android:contentDescription="@string/decrement_button_image" />
 
                 <TextView
-                    android:id="@+id/quantity_text_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="@dimen/dummy"
-                    android:text="0" />
+                    style="@style/QuantityTVStyle"
+                    android:text="@string/default_quantity" />
 
                 <ImageButton
                     android:id="@+id/increment_img_btn"
-                    android:layout_width="@dimen/dummy3"
-                    android:layout_height="@dimen/dummy3"
-                    android:layout_marginLeft="@dimen/dummy"
-                    android:background="@drawable/ic_add_circle_outline_black_36dp" />
+                    style="@style/QuantityBtnStyle"
+                    android:background="@drawable/ic_add_circle_outline_black_36dp"
+                    android:contentDescription="@string/increment_button_image" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Supplier's info -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Label -->
             <TextView
-                style="@style/CategoryStyle"
+                style="@style/HeaderStyle"
                 android:text="@string/supplier_info" />
 
-            <!-- Input fields -->
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:orientation="vertical"
-                android:paddingLeft="4dp">
+                style="@style/EditTextLinesStyle"
+                android:orientation="vertical">
 
-                <!-- Title field -->
                 <EditText
                     android:id="@+id/supplier_name"
-                    style="@style/EditorFieldStyle"
+                    style="@style/EditTextStyle"
                     android:inputType="textCapWords" />
 
-                <!-- Author field -->
                 <EditText
                     android:id="@+id/supplier_phone"
-                    style="@style/EditorFieldStyle"
-                    android:inputType="textCapWords" />
+                    style="@style/EditTextStyle"
+                    android:inputType="phone" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/parameter_16_dp"
+            android:layout_marginRight="@dimen/parameter_16_dp"
+            android:layout_marginTop="@dimen/parameter_36_dp"
             android:orientation="horizontal">
 
-            <Button
+            <mehdi.sakout.fancybuttons.FancyButton
                 android:id="@+id/delete_record_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Delete record" />
+                style="@style/ButtonStyle"
+                android:text="@string/delete_record"
+                fancy:fb_borderColor="@color/deleteBtnBorderColor"
+                fancy:fb_borderWidth="@dimen/parameter_4_dp"
+                fancy:fb_defaultColor="@color/deleteBtnColor"
+                fancy:fb_focusColor="@color/onClickColor"
+                fancy:fb_iconPaddingTop="@dimen/parameter_8_dp"
+                fancy:fb_iconPosition="left"
+                fancy:fb_iconResource="@drawable/ic_delete_forever_blue_grey_800_24dp"
+                fancy:fb_radius="@dimen/parameter_8_dp"
+                fancy:fb_textColor="@color/btnTextColor" />
 
-            <Button
+            <mehdi.sakout.fancybuttons.FancyButton
                 android:id="@+id/contact_supplier_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Contact supplier" />
+                style="@style/ButtonStyle"
+                android:text="@string/contact_supplier"
+                fancy:fb_borderColor="@color/contactBtnBorderColor"
+                fancy:fb_borderWidth="@dimen/parameter_4_dp"
+                fancy:fb_defaultColor="@color/contactBtnColor"
+                fancy:fb_focusColor="@color/onClickColor"
+                fancy:fb_iconPaddingTop="@dimen/parameter_8_dp"
+                fancy:fb_iconPosition="left"
+                fancy:fb_iconResource="@drawable/ic_phone_blue_grey_800_24dp"
+                fancy:fb_radius="@dimen/parameter_8_dp"
+                fancy:fb_textColor="@color/btnTextColor" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

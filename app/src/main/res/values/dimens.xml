@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="dummy">8dp</dimen>
-    <dimen name="dummy2">16sp</dimen>
-    <dimen name="dummy3">36sp</dimen>
-    <dimen name="dummy4">24sp</dimen>
+    <!-- Parameters-->
+    <dimen name="parameter_4_dp">4dp</dimen>
+    <dimen name="parameter_8_dp">8dp</dimen>
+    <dimen name="parameter_16_dp">16dp</dimen>
+    <dimen name="parameter_36_dp">36dp</dimen>
     <!-- Margin around the floating action button in MainActivity-->
     <dimen name="fab_margin">16dp</dimen>
     <!-- CardView parameters-->
@@ -11,4 +12,7 @@
     <dimen name="card_elevation">3dp</dimen>
     <dimen name="card_min_height">120dp</dimen>
     <dimen name="card_max_height">150dp</dimen>
+    <!-- Text sizes-->
+    <dimen name="text_size_14_sp">14sp</dimen>
+    <dimen name="text_size_18_sp">18sp</dimen>
 </resources>

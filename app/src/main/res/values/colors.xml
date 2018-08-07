@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#9cd50000</color>
+    <color name="colorPrimaryDark">#b4000430</color>
+    <color name="colorAccent">#b4a40217</color>
     <color name="etEnabledTextColor">#FF8B8787</color>
+    <color name="emptySubtitleTextColor">#A2AAB0</color>
+    <color name="deleteBtnBorderColor">#b4a40217</color>
+    <color name="contactBtnBorderColor">#b4000430</color>
+    <color name="deleteBtnColor">#9cd50000</color>
+    <color name="contactBtnColor">#b7206cb7</color>
+    <color name="onClickColor">#9bd823</color>
+    <color name="btnTextColor">#FFFFFF</color>
 </resources>

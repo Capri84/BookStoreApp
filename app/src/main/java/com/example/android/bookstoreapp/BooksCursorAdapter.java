@@ -3,36 +3,25 @@ package com.example.android.bookstoreapp;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.android.bookstoreapp.data.BooksContract;
 
-import org.w3c.dom.Text;
-
-/**
- * This adapter knows how to create list items for each row of books data in the {@link Cursor}.
- */
 public class BooksCursorAdapter extends CursorAdapter {
 
-    // Constructs a new {@link BooksCursorAdapter}.
-    public BooksCursorAdapter(Context context, Cursor c) {
+    // Constructor.
+    BooksCursorAdapter(Context context, Cursor c) {
         super(context, c, 0);
     }
 
-    // Makes a new blank list item view. No data is set (or bound) to the view yet.
+    // This method makes a new blank list item view.
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         View view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
@@ -47,7 +36,7 @@ public class BooksCursorAdapter extends CursorAdapter {
     public void bindView(View view, final Context context, final Cursor cursor) {
         final ViewHolder viewHolder = (ViewHolder) view.getTag();
 
-        // Find the columnns of book attributes that we're interested in
+        // Find the columnns of book attributes
         int idColumnIndex = cursor.getColumnIndex(BooksContract.BooksEntry._ID);
         int titleColumnIndex = cursor.getColumnIndex(BooksContract.BooksEntry.COLUMN_BOOKS_NAME);
         int authorColumnIndex = cursor.getColumnIndex(BooksContract.BooksEntry.COLUMN_BOOKS_AUTHOR);
@@ -82,6 +71,7 @@ public class BooksCursorAdapter extends CursorAdapter {
         });
     }
 
+    // ViewHolder
     public static class ViewHolder {
         TextView titleTextView;
         TextView authorTextView;

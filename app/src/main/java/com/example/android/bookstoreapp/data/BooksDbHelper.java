@@ -20,13 +20,13 @@ public class BooksDbHelper extends SQLiteOpenHelper {
             BooksContract.BooksEntry.COLUMN_BOOKS_SUPPLIER_NAME + " TEXT NOT NULL, " +
             BooksContract.BooksEntry.COLUMN_BOOKS_SUPPLIER_PHONE + " TEXT NOT NULL" + ");";
 
-    public BooksDbHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    BooksDbHelper(Context context) {
+        super(context, DATABASE_NAME, null,
+                DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        // Execute the SQL statement
         sqLiteDatabase.execSQL(SQL_CREATE_BOOKS_TABLE);
     }
 

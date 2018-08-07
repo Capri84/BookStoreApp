@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Layout for the list of books-->
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,9 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:contentDescription="@string/empty_shelf_image"
             android:adjustViewBounds="true"
-            android:scaleType="centerInside"
+            android:contentDescription="@string/empty_shelf_image"
+            android:scaleType="centerCrop"
             android:src="@drawable/empty_shelf" />
 
         <TextView
@@ -35,9 +35,9 @@
             android:layout_below="@+id/img_empty_shelf"
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif-medium"
-            android:paddingTop="16dp"
+            android:paddingTop="@dimen/parameter_8_dp"
             android:text="@string/empty_view_title_text"
-            android:textAppearance="?android:textAppearanceMedium" />
+            android:textSize="@dimen/text_size_18_sp" />
 
         <TextView
             android:id="@+id/tv_empty_subtitle"
@@ -46,10 +46,10 @@
             android:layout_below="@+id/tv_empty_title"
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif"
-            android:paddingTop="8dp"
+            android:paddingTop="@dimen/parameter_8_dp"
             android:text="@string/empty_view_subtitle_text"
-            android:textAppearance="?android:textAppearanceSmall"
-            android:textColor="#A2AAB0" />
+            android:textColor="@color/emptySubtitleTextColor"
+            android:textSize="@dimen/text_size_14_sp" />
     </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
