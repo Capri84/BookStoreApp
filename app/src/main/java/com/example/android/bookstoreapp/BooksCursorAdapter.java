@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.android.bookstoreapp.data.BooksContract;
@@ -55,7 +56,8 @@ public class BooksCursorAdapter extends CursorAdapter {
         // Populate fields with extracted properties
         viewHolder.titleTextView.setText(bookTitle);
         viewHolder.authorTextView.setText(bookAuthor);
-        viewHolder.priceTextView.setText(String.valueOf(bookPrice));
+        String price = String.valueOf(bookPrice) + context.getText(R.string.currency_sign);
+        viewHolder.priceTextView.setText(price);
         viewHolder.quantityTextView.setText(String.valueOf(bookQuantity));
         viewHolder.saleButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +80,7 @@ public class BooksCursorAdapter extends CursorAdapter {
         TextView priceTextView;
         TextView inStockTextView;
         TextView quantityTextView;
-        Button saleButton;
+        ImageButton saleButton;
 
         ViewHolder(View view) {
             titleTextView = view.findViewById(R.id.book_title_tv);

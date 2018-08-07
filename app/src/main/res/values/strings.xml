@@ -11,7 +11,7 @@
     <string name="decrement_button_image">Decrement quantity</string>
     <string name="increment_button_image">Increment quantity</string>
     <!-- Sale button -->
-    <string name="sale_button">Sale</string>
+    <string name="sale_button">Sale button</string>
     <!-- In stock TextView -->
     <string name="in_stock_tv">In stock:</string>
     <!-- Book info -->
@@ -70,4 +70,9 @@
     <!-- BookDetailsActivity buttons -->
     <string name="delete_record">Delete record</string>
     <string name="contact_supplier">Contact supplier</string>
+    <!-- Preview (tools) string -->
+    <string name="preview_book_title">Atlas Shrugged</string>
+    <string name="preview_book_author">Ayn Rand</string>
+    <string name="preview_in_stock">5</string>
+    <string name="preview_price">25$</string>
 </resources>
