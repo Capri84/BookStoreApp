@@ -126,8 +126,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/parameter_16_dp"
-            android:layout_marginRight="@dimen/parameter_16_dp"
             android:layout_marginTop="@dimen/parameter_36_dp"
             android:orientation="horizontal">
 

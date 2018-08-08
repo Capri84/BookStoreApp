@@ -28,11 +28,13 @@
                 <EditText
                     android:id="@+id/edit_book_title"
                     style="@style/EditTextStyle"
+                    android:hint="@string/book_title"
                     android:inputType="textCapWords" />
 
                 <EditText
                     android:id="@+id/edit_book_author"
                     style="@style/EditTextStyle"
+                    android:hint="@string/book_author"
                     android:inputType="textCapWords" />
             </LinearLayout>
         </LinearLayout>
@@ -51,6 +53,7 @@
                 <EditText
                     android:id="@+id/edit_book_price"
                     style="@style/EditTextStyle"
+                    android:hint="@string/book_price_hint"
                     android:inputType="number" />
 
                 <TextView
@@ -113,11 +116,13 @@
                 <EditText
                     android:id="@+id/supplier_name"
                     style="@style/EditTextStyle"
+                    android:hint="@string/supplier_name"
                     android:inputType="textCapWords" />
 
                 <EditText
                     android:id="@+id/supplier_phone"
                     style="@style/EditTextStyle"
+                    android:hint="@string/supplier_phone"
                     android:inputType="phone" />
             </LinearLayout>
         </LinearLayout>
